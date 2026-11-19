@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Becoming A Legend — Hệ Thống Thất Giới</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══════ MAIN MENU ══════ -->
+<div id="main-menu" class="screen active">
+    <div class="menu-bg">
+        <div class="menu-title-container">
+            <div class="menu-subtitle">HỆ THỐNG THẤT GIỚI</div>
+            <h1 class="menu-title">BECOMING<br>A LEGEND</h1>
+            <div class="menu-tagline">Bảy thế giới. Một huyền thoại.</div>
+        </div>
+        <div class="menu-buttons">
+            <button id="btn-new-game" class="menu-btn primary">⚔ Bắt Đầu Mới</button>
+            <button id="btn-continue" class="menu-btn">📂 Tiếp Tục</button>
+        </div>
+        <div class="menu-version">v0.1.0 — Text-based RPG</div>
+    </div>
+</div>
+
+<!-- ══════ CHARACTER CREATION: WORLD SELECT ══════ -->
+<div id="character-creation" class="screen">
+    <div class="creation-header">
+        <h2>Chọn Thế Giới Xuất Thân</h2>
+        <p>Thế giới sẽ quyết định năng lực bẩm sinh và con đường phát triển của ngươi.</p>
+    </div>
+    <div id="world-grid" class="world-grid"></div>
+</div>
+
+<!-- ══════ CHARACTER CREATION: CLASS SELECT ══════ -->
+<div id="class-selection" class="screen">
+    <div class="creation-header">
+        <button id="btn-back-world" class="back-btn">← Chọn lại thế giới</button>
+        <h2>Chọn Nghề Nghiệp — <span id="class-world-name"></span></h2>
+        <p>Thức tỉnh lần 1: Chọn con đường chiến đấu.</p>
+    </div>
+    <div id="class-grid" class="class-grid"></div>
+</div>
+
+<!-- ══════ CHARACTER CREATION: NAME INPUT ══════ -->
+<div id="name-input" class="screen">
+    <div class="name-input-container">
+        <h2>Nhập Tên Nhân Vật</h2>
+        <input type="text" id="char-name-input" class="name-input" placeholder="Tên của ngươi..." maxlength="20" autocomplete="off">
+        <button id="btn-name-confirm" class="menu-btn primary">✦ Thức Tỉnh ✦</button>
+    </div>
+</div>
+
+<!-- ══════ GAME SCREEN (Story / Exploration) ══════ -->
+<div id="game-screen" class="screen">
+    <div id="location-bar" class="location-bar">📍 Thánh Vực Dung Hợp</div>
+    <div id="story-log" class="story-log"></div>
+    <div id="choice-buttons" class="choice-buttons"></div>
+</div>
+
+<!-- ══════ COMBAT SCREEN ══════ -->
+<div id="combat-screen" class="screen">
+    <div id="enemy-panel" class="enemy-panel"></div>
+    <div id="combat-log" class="combat-log"></div>
+    <div class="player-combat-panel">
+        <div id="player-combat-name" class="player-combat-name"></div>
+        <div class="player-bars">
+            <div class="stat-bar hp-bar"><div id="player-hp-bar" class="stat-bar-fill"></div>
+                <span id="player-hp-text" class="stat-bar-text"></span></div>
+            <div class="stat-bar mp-bar"><div id="player-mp-bar" class="stat-bar-fill mp-fill"></div>
+                <span id="player-mp-text" class="stat-bar-text"></span></div>
+        </div>
+        <div id="player-effects" class="player-effects"></div>
+    </div>
+    <div id="sub-panel" class="sub-panel"></div>
+    <div id="combat-actions" class="combat-actions"></div>
+</div>
+
+<!-- ══════ CHARACTER SHEET ══════ -->
+<div id="character-sheet" class="screen">
+    <div class="sheet-header">
+        <button id="btn-back-game" class="back-btn">← Quay lại</button>
+        <h2>📋 Thông Tin Nhân Vật</h2>
+    </div>
+    <div id="cs-content" class="cs-content"></div>
+</div>
+
+<!-- ══════ INVENTORY ══════ -->
+<div id="inventory-screen" class="screen">
+    <div class="sheet-header">
+        <button id="btn-back-game-2" class="back-btn">← Quay lại</button>
+        <h2>🎒 Túi Đồ</h2>
+    </div>
+    <div id="inv-content" class="inv-content"></div>
+</div>
+
+<!-- ══════ BOTTOM NAV ══════ -->
+<div id="bottom-nav" class="bottom-nav" style="display:none">
+    <button id="nav-story" class="nav-btn">📖 Truyện</button>
+    <button id="nav-character" class="nav-btn">📋 Nhân Vật</button>
+    <button id="nav-inventory" class="nav-btn">🎒 Túi Đồ</button>
+    <button id="nav-save" class="nav-btn">💾 Lưu</button>
+</div>
+
+<!-- ══════ TOAST ══════ -->
+<div id="toast" class="toast"></div>
+
+<!-- Scripts -->
+<script src="js/data.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
