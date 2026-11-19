@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -98,6 +99,14 @@ dependencies {
 
     // ── Coroutines ──
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+
+    // ── Room Database (Local Storage) ──
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    ksp("androidx.room:room-compiler:2.6.1")
+
+    // ── Gson (JSON serialization for Room TypeConverters) ──
+    implementation("com.google.code.gson:gson:2.11.0")
 
     // ── Testing ──
     testImplementation("junit:junit:4.13.2")

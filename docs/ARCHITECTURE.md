@@ -389,3 +389,4 @@ All layouts go in `res/layout/`:
 - `item_story_log.xml` — Single story text item
 - `item_combat_log.xml` — Single combat log item
 - `item_choice_button.xml` — Story choice button
+

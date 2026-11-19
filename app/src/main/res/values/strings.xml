@@ -1,4 +1,126 @@
 <resources>
     <string name="app_name">Becoming A Legend</string>
-</resources>
+    <string name="splash_subtitle">Hành trình trở thành huyền thoại</string>
 
+    <!-- Main Menu -->
+    <string name="menu_new_game">Bắt Đầu Mới</string>
+    <string name="menu_continue">Tiếp Tục</string>
+    <string name="menu_pvp_arena">PvP Đấu Trường</string>
+    <string name="menu_settings">Cài Đặt</string>
+    <string name="menu_no_save">Chưa có dữ liệu lưu</string>
+
+    <!-- Character Creation -->
+    <string name="creation_title">Tạo Nhân Vật</string>
+    <string name="creation_step_world">Chọn Thế Giới</string>
+    <string name="creation_step_class">Chọn Nghề Nghiệp</string>
+    <string name="creation_step_name">Đặt Tên</string>
+    <string name="creation_step_confirm">Xác Nhận</string>
+    <string name="creation_enter_name">Nhập tên nhân vật</string>
+    <string name="creation_confirm_title">Xác nhận nhân vật</string>
+    <string name="creation_btn_next">Tiếp Theo</string>
+    <string name="creation_btn_back">Quay Lại</string>
+    <string name="creation_btn_create">Tạo Nhân Vật</string>
+    <string name="creation_name_hint">Tên nhân vật của bạn</string>
+    <string name="creation_stat_preview">Xem Trước Chỉ Số</string>
+
+    <!-- World Names -->
+    <string name="world_technology">Công Nghệ Thế Giới</string>
+    <string name="world_cultivation">Thế Giới Tu Tiên</string>
+    <string name="world_mutant">Thế Giới Dị Nhân</string>
+    <string name="world_divine">Thế Giới Chư Thần</string>
+    <string name="world_energy">Năng Lượng Thế Giới</string>
+    <string name="world_eldritch">Quỷ Dị Thế Giới</string>
+    <string name="world_spirit">Tinh Thần Thế Giới</string>
+
+    <!-- World Descriptions -->
+    <string name="world_technology_desc">Kỷ nguyên Cyberpunk, tài nguyên cạn kiệt, bị thống trị bởi các Siêu Tập Đoàn.</string>
+    <string name="world_cultivation_desc">Đại lục tu tiên mênh mông với vô số Tông Môn và Thánh Địa.</string>
+    <string name="world_mutant_desc">Hậu tận thế, chuỗi gen sinh vật bị bẻ cong tạo ra các Dị năng.</string>
+    <string name="world_divine_desc">Vương quốc trên mây, quyền lực dựa trên Tín Ngưỡng và các Thần Linh.</string>
+    <string name="world_energy_desc">Thế giới nguyên thủy với các luồng bão nguyên tố và Cự Thú Năng Lượng.</string>
+    <string name="world_eldritch_desc">Thế giới bóng tối và sương mù, vận hành theo Quy Tắc Sinh Tồn quái gở.</string>
+    <string name="world_spirit_desc">Cõi mộng cảnh, nơi hội tụ ý niệm, ký ức và linh hồn.</string>
+
+    <!-- Game Activity -->
+    <string name="game_chapter_format">Chương %d</string>
+    <string name="game_location_format">📍 %s</string>
+    <string name="game_btn_inventory">Túi Đồ</string>
+    <string name="game_btn_character">Nhân Vật</string>
+    <string name="game_btn_menu">Menu</string>
+
+    <!-- Combat Activity -->
+    <string name="combat_title">⚔ Chiến Đấu</string>
+    <string name="combat_enemy_level">Cấp %d</string>
+    <string name="combat_btn_attack">Tấn Công</string>
+    <string name="combat_btn_skill">Kỹ Năng</string>
+    <string name="combat_btn_defend">Phòng Thủ</string>
+    <string name="combat_btn_item">Vật Phẩm</string>
+    <string name="combat_btn_flee">Bỏ Chạy</string>
+    <string name="combat_hp_label">HP</string>
+    <string name="combat_mp_label">MP</string>
+    <string name="combat_victory">🏆 Chiến Thắng!</string>
+    <string name="combat_defeat">💀 Thất Bại!</string>
+    <string name="combat_fled">🏃 Đã Bỏ Chạy!</string>
+    <string name="combat_exp_reward">+%d EXP</string>
+    <string name="combat_gold_reward">+%d Vàng</string>
+
+    <!-- PvP Arena -->
+    <string name="pvp_title">Đấu Trường PvP</string>
+    <string name="pvp_tab_offline">Offline (Bot)</string>
+    <string name="pvp_tab_online">Online</string>
+    <string name="pvp_btn_battle">Chiến Đấu!</string>
+    <string name="pvp_matchmaking">Đang tìm đối thủ…</string>
+    <string name="pvp_rank">Xếp Hạng: %d</string>
+    <string name="pvp_wins">Thắng: %d</string>
+    <string name="pvp_losses">Thua: %d</string>
+    <string name="pvp_select_difficulty">Chọn Độ Khó</string>
+    <string name="pvp_easy">Dễ</string>
+    <string name="pvp_normal">Thường</string>
+    <string name="pvp_hard">Khó</string>
+
+    <!-- Inventory -->
+    <string name="inventory_title">Túi Đồ</string>
+    <string name="inventory_empty">Túi đồ trống</string>
+    <string name="inventory_btn_equip">Trang Bị</string>
+    <string name="inventory_btn_use">Sử Dụng</string>
+    <string name="inventory_btn_discard">Vứt Bỏ</string>
+    <string name="inventory_quantity">x%d</string>
+
+    <!-- Character Sheet -->
+    <string name="character_title">Thông Tin Nhân Vật</string>
+    <string name="character_level">Cấp Độ: %d</string>
+    <string name="character_class_label">Nghề: %s</string>
+    <string name="character_world_label">Thế Giới: %s</string>
+    <string name="character_gold_label">Vàng: %d</string>
+    <string name="character_stats_title">Chỉ Số</string>
+    <string name="character_equipment_title">Trang Bị</string>
+    <string name="character_runes_title">Rune</string>
+    <string name="character_awakening_title">Thức Tỉnh</string>
+    <string name="character_awakening_level">Cấp Thức Tỉnh: %d</string>
+
+    <!-- Stats Labels -->
+    <string name="stat_hp">HP</string>
+    <string name="stat_mp">MP</string>
+    <string name="stat_exp">EXP</string>
+    <string name="stat_atk">Tấn Công</string>
+    <string name="stat_def">Phòng Thủ</string>
+    <string name="stat_spd">Tốc Độ</string>
+    <string name="stat_crit_rate">Tỷ Lệ Chí Mạng</string>
+    <string name="stat_crit_dmg">Sát Thương Chí Mạng</string>
+    <string name="stat_spiritual">Tinh Thần Lực</string>
+
+    <!-- Equipment Slots -->
+    <string name="equip_weapon">Vũ Khí</string>
+    <string name="equip_head">Mũ</string>
+    <string name="equip_body">Giáp</string>
+    <string name="equip_legs">Giày</string>
+    <string name="equip_acc1">Phụ Kiện 1</string>
+    <string name="equip_acc2">Phụ Kiện 2</string>
+    <string name="equip_empty">Trống</string>
+
+    <!-- General -->
+    <string name="btn_ok">Đồng Ý</string>
+    <string name="btn_cancel">Hủy</string>
+    <string name="btn_close">Đóng</string>
+    <string name="loading">Đang tải…</string>
+</resources>

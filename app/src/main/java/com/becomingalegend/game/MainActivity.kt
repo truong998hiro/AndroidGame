@@ -1,81 +1,44 @@
 package com.becomingalegend.game
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.becomingalegend.game.ads.AdManager
-import com.becomingalegend.game.databinding.ActivityMainBinding
+import com.becomingalegend.game.ui.MainMenuActivity
 
 /**
- * Main entry point of the game.
- * Sets up full-screen immersive mode, the game view, and ad integration.
+ * Splash / Router Activity.
+ * Shows the game logo briefly, then routes to MainMenuActivity.
  */
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-    private lateinit var gameView: GameView
-    private lateinit var adManager: AdManager
+    companion object {
+        private const val SPLASH_DELAY_MS = 2000L
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // Full-screen immersive mode
         setupFullScreen()
+        setContentView(R.layout.activity_splash)
 
-        // Inflate layout
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        // Initialize game view
-        gameView = binding.gameView
-
-        // Initialize ads
-        adManager = AdManager(this)
-        adManager.loadBannerAd(binding.adViewContainer)
-        adManager.loadInterstitialAd()
-        adManager.loadRewardedAd()
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, MainMenuActivity::class.java))
+            finish()
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }, SPLASH_DELAY_MS)
     }
 
-    /**
-     * Configure full-screen immersive mode (hide status bar & nav bar).
-     */
     private fun setupFullScreen() {
-        // Keep screen on while playing
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-
-        // Edge-to-edge display
         WindowCompat.setDecorFitsSystemWindows(window, false)
         val controller = WindowInsetsControllerCompat(window, window.decorView)
         controller.hide(WindowInsetsCompat.Type.systemBars())
         controller.systemBarsBehavior =
             WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
     }
-
-    override fun onResume() {
-        super.onResume()
-        gameView.resume()
-    }
-
-    override fun onPause() {
-        super.onPause()
-        gameView.pause()
-    }
-
-    /**
-     * Show an interstitial ad (e.g., between levels).
-     */
-    fun showInterstitialAd(onAdDismissed: () -> Unit = {}) {
-        adManager.showInterstitialAd(this, onAdDismissed)
-    }
-
-    /**
-     * Show a rewarded ad (e.g., for extra lives).
-     */
-    fun showRewardedAd(onRewarded: (type: String, amount: Int) -> Unit) {
-        adManager.showRewardedAd(this, onRewarded)
-    }
 }
-
